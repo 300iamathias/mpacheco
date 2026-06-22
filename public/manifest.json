@@ -4,8 +4,8 @@
   "description": "Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2d3a2e",
-  "theme_color": "#2d3a2e",
+  "background_color": "#FDFBF7",
+  "theme_color": "#FDFBF7",
   "icons": [
     {
       "src": "/dm-icon.png",

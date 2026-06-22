@@ -19,56 +19,49 @@ const socialLinks = [
     name: "WhatsApp",
     url: "https://wa.me/593997158532",
     icon: MessageCircle,
-    color: "from-[#25D366] to-[#128C7E]",
-    hoverColor: "hover:shadow-[#25D366]/30",
+    color: "bg-[#25D366]",
     description: "Escríbeme directamente",
   },
   {
     name: "Sitio Web",
     url: "https://dimali.jimbra.net",
     icon: Globe,
-    color: "from-[#4A5D23] to-[#6B8E23]",
-    hoverColor: "hover:shadow-[#6B8E23]/30",
+    color: "bg-[#4A5D23]",
     description: "Ver colección completa",
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/dimali.ec",
     icon: Instagram,
-    color: "from-[#f09433] via-[#e6683c] to-[#bc1888]",
-    hoverColor: "hover:shadow-pink-500/30",
+    color: "bg-[#E1306C]",
     description: "@dimali.ec",
   },
   {
     name: "TikTok",
     url: "https://www.tiktok.com/@dimalijewelry",
     icon: Music2,
-    color: "from-[#00f2ea] to-[#ff0050]",
-    hoverColor: "hover:shadow-[#00f2ea]/30",
+    color: "bg-[#010101]",
     description: "@dimalijewelry",
   },
   {
     name: "Facebook",
     url: "https://www.facebook.com/profile.php?id=61554358637246",
     icon: Facebook,
-    color: "from-[#1877f2] to-[#0d5bbd]",
-    hoverColor: "hover:shadow-blue-500/30",
+    color: "bg-[#1877F2]",
     description: "Di Mali",
   },
   {
     name: "Email",
     url: "mailto:dimalijewelry@gmail.com",
     icon: Mail,
-    color: "from-[#B48D3C] to-[#D4A843]",
-    hoverColor: "hover:shadow-[#B48D3C]/30",
+    color: "bg-[#B48D3C]",
     description: "dimalijewelry@gmail.com",
   },
   {
     name: "Llamar",
     url: "tel:+593997158532",
     icon: Phone,
-    color: "from-[#40918C] to-[#2D7A75]",
-    hoverColor: "hover:shadow-[#40918C]/30",
+    color: "bg-[#40918C]",
     description: "099 715 8532",
   },
 ];
@@ -85,25 +78,25 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.07, delayChildren: 0.15 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.35, ease: "easeOut" },
   },
 };
 
 const textVariants = {
-  hidden: { opacity: 0, y: 15 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 0.35, ease: "easeOut" },
   },
 };
 
@@ -114,47 +107,40 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Animated Background */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-[#2d3a2e] via-[#3a4a35] to-[#2d3a2e]">
+      {/* Subtle background decoration */}
+      <div className="blob-container" aria-hidden="true">
         <div className="blob blob-1" />
         <div className="blob blob-2" />
         <div className="blob blob-3" />
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage:
-              "radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
-          }}
-        />
       </div>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-start px-4 py-8 sm:py-12 max-w-lg mx-auto w-full">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-start px-5 py-10 sm:py-14 max-w-md mx-auto w-full">
         <motion.div
-          className="flex flex-col items-center mb-8"
+          className="flex flex-col items-center mb-9"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
           {/* Profile Photo */}
-          <motion.div variants={textVariants} className="mb-4">
-            <div className="w-[110px] h-[110px] rounded-full overflow-hidden shadow-xl shadow-black/40 ring-3 ring-[#B48D3C]/40">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/mario-pacheco.png"
-                alt="Mario Pacheco"
-                width={110}
-                height={110}
-                className="w-full h-full object-cover"
-              />
+          <motion.div variants={textVariants} className="mb-6">
+            <div className="w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg ring-[3px] ring-[#B48D3C]/25 p-[3px] bg-gradient-to-br from-[#B48D3C]/20 via-transparent to-[#B48D3C]/20">
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img
+                  src="/mario-pacheco.png"
+                  alt="Mario Pacheco"
+                  width={120}
+                  height={120}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </motion.div>
 
           {/* Name */}
           <motion.h1
             variants={textVariants}
-            className="text-3xl sm:text-4xl font-bold text-[#f0ebe3] tracking-tight"
+            className="text-[28px] sm:text-[34px] font-bold text-[#1a1a1a] tracking-tight leading-tight"
           >
             Mario Pacheco
           </motion.h1>
@@ -162,7 +148,7 @@ export default function Home() {
           {/* Subtitle */}
           <motion.p
             variants={textVariants}
-            className="text-[#40918C] font-semibold text-sm sm:text-base mt-1 tracking-wide uppercase"
+            className="text-[#C2A649] font-semibold text-[13px] sm:text-sm mt-1.5 tracking-[0.25em] uppercase"
           >
             Di Mali — Manos Mágicas
           </motion.p>
@@ -170,11 +156,17 @@ export default function Home() {
           {/* Bio */}
           <motion.p
             variants={textVariants}
-            className="text-[#c4bfa8] text-center text-sm sm:text-base mt-3 max-w-xs leading-relaxed"
+            className="text-[#5a5a5a] text-center text-[13px] sm:text-sm mt-4 max-w-[280px] leading-relaxed"
           >
             El verdadero lujo no se fabrica, se teje. Sombreros de paja
             toquilla 100% artesanales. Patrimonio Cultural de la Humanidad.
           </motion.p>
+
+          {/* Gold divider */}
+          <motion.div
+            variants={textVariants}
+            className="w-12 h-[1.5px] bg-gradient-to-r from-transparent via-[#B48D3C] to-transparent mt-6"
+          />
         </motion.div>
 
         {/* Link Buttons */}
@@ -189,35 +181,32 @@ export default function Home() {
               key={link.name}
               variants={itemVariants}
               onClick={() => handleLinkClick(link.url)}
-              className={`group relative w-full flex items-center gap-4 px-5 py-4 rounded-2xl border border-[#B48D3C]/25 bg-[#B48D3C]/20 text-left transition-all duration-200 hover:bg-[#B48D3C]/30 hover:border-[#B48D3C]/40 hover:shadow-lg cursor-pointer active:scale-[0.98]`}
+              className="group relative w-full flex items-center gap-4 px-5 py-4 rounded-2xl bg-white border border-[#e2dcd2] text-left shadow-[0_1px_4px_rgba(180,141,60,0.06)] transition-all duration-250 hover:shadow-[0_6px_20px_rgba(180,141,60,0.12)] hover:border-[#B48D3C]/50 cursor-pointer active:scale-[0.985]"
             >
               <div
-                className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${link.color} opacity-0 group-hover:opacity-10 transition-opacity duration-200`}
-              />
-              <div
-                className={`relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br ${link.color} shrink-0 shadow-lg`}
+                className={`relative flex items-center justify-center w-11 h-11 rounded-xl ${link.color} shrink-0 shadow-sm`}
               >
                 <link.icon className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-[#f0ebe3] font-semibold text-sm sm:text-base">
+                <h3 className="text-[#1a1a1a] font-semibold text-[15px]">
                   {link.name}
                 </h3>
-                <p className="text-[#c4bfa8]/80 text-xs truncate">
+                <p className="text-[#7a7a7a] text-[12px] truncate mt-0.5">
                   {link.description}
                 </p>
               </div>
-              <ChevronRight className="w-5 h-5 text-[#c4bfa8]/60 group-hover:text-[#f0ebe3] group-hover:translate-x-1 transition-all duration-200" />
+              <ChevronRight className="w-[18px] h-[18px] text-[#c4bfa8] group-hover:text-[#B48D3C] group-hover:translate-x-0.5 transition-all duration-250" />
             </motion.button>
           ))}
         </motion.div>
 
         {/* Social Icons Row */}
         <motion.div
-          className="flex items-center justify-center gap-4 mt-8"
-          initial={{ opacity: 0, y: 15 }}
+          className="flex items-center justify-center gap-4 mt-9"
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.4 }}
+          transition={{ delay: 0.7, duration: 0.35 }}
         >
           {socialIcons.map((social, i) => (
             <motion.a
@@ -225,10 +214,10 @@ export default function Home() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center justify-center w-10 h-10 rounded-full ${social.bg} text-white shadow-md transition-all duration-200 hover:scale-110 hover:shadow-lg active:scale-90`}
+              className={`flex items-center justify-center w-10 h-10 rounded-full ${social.bg} text-white shadow-sm transition-all duration-250 hover:scale-110 hover:shadow-md active:scale-90`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9 + i * 0.06, duration: 0.3 }}
+              transition={{ delay: 0.8 + i * 0.05, duration: 0.25 }}
               aria-label={social.label}
             >
               <social.icon className="w-4 h-4" />
@@ -238,10 +227,10 @@ export default function Home() {
 
         {/* Share button */}
         <motion.button
-          className="mt-6 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#B48D3C]/15 text-[#c4bfa8]/70 text-xs hover:text-[#B48D3C] hover:bg-white/10 hover:border-[#B48D3C]/30 transition-all duration-200 cursor-pointer active:scale-95"
+          className="mt-7 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#e2dcd2] text-[#6b6b6b] text-[12px] shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:text-[#B48D3C] hover:border-[#B48D3C]/40 hover:shadow-[0_2px_8px_rgba(180,141,60,0.1)] transition-all duration-250 cursor-pointer active:scale-95 tracking-wide"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.1 }}
+          transition={{ delay: 1 }}
           onClick={() => {
             if (navigator.share) {
               navigator.share({
@@ -260,24 +249,24 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto pb-6 pt-8 text-center">
+      <footer className="relative z-10 mt-auto pb-6 pt-8 text-center">
         <motion.a
           href="https://dimali.jimbra.net"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#c4bfa8]/50 text-xs flex items-center justify-center gap-1 hover:text-[#B48D3C] transition-colors duration-200 cursor-pointer"
+          className="text-[#9a9590] text-[11px] flex items-center justify-center gap-1 hover:text-[#B48D3C] transition-colors duration-250 cursor-pointer tracking-wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 1.1 }}
         >
           Di Mali —{" "}
           <span className="text-[#B48D3C] font-semibold">Manos Mágicas</span>
         </motion.a>
         <motion.p
-          className="text-[#c4bfa8]/30 text-[10px] mt-1"
+          className="text-[#c4bfb6] text-[10px] mt-1.5 tracking-wide"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.3 }}
+          transition={{ delay: 1.2 }}
         >
           © {new Date().getFullYear()} Di Mali
         </motion.p>
