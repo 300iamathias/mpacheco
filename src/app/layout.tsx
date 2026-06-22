@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mario Pacheco | Di Mali — Manos Mágicas",
   description:
-    "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad. 🇪🇨",
+    "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad.",
   keywords: [
     "Di Mali",
     "Mario Pacheco",
@@ -28,20 +28,20 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Di Mali" }],
   icons: {
-    icon: "/mario-pacheco.png",
-    apple: "/mario-pacheco.png",
+    icon: "/dm-icon.png",
+    apple: "/dm-icon.png",
   },
   manifest: "/manifest.json",
   openGraph: {
     title: "Mario Pacheco | Di Mali — Manos Mágicas",
     description:
-      "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad. 🇪🇨",
+      "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad.",
     type: "website",
-    url: "https://dim.al",
+    url: "https://mpacheco.jimbra.net",
     siteName: "Di Mali",
     images: [
       {
-        url: "https://dim.al/mario-pacheco.png",
+        url: "https://mpacheco.jimbra.net/mario-pacheco.png",
         width: 1200,
         height: 630,
         alt: "Mario Pacheco - Di Mali",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Mario Pacheco | Di Mali — Manos Mágicas",
     description:
       "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales.",
-    images: ["https://dim.al/mario-pacheco.png"],
+    images: ["https://mpacheco.jimbra.net/mario-pacheco.png"],
   },
 };
 

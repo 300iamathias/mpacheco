@@ -246,11 +246,11 @@ export default function Home() {
             if (navigator.share) {
               navigator.share({
                 title: "Mario Pacheco | Di Mali — Manos Mágicas",
-                text: "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales. 🇪🇨",
-                url: "https://dim.al",
+                text: "El verdadero lujo no se fabrica, se teje. Sombreros de paja toquilla 100% artesanales.",
+                url: "https://mpacheco.jimbra.net",
               });
             } else {
-              navigator.clipboard.writeText("https://dim.al");
+              navigator.clipboard.writeText("https://mpacheco.jimbra.net");
             }
           }}
         >

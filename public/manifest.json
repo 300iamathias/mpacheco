@@ -8,25 +8,25 @@
   "theme_color": "#2d3a2e",
   "icons": [
     {
-      "src": "/mario-pacheco.png",
+      "src": "/dm-icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/mario-pacheco.png",
+      "src": "/dm-icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/mario-pacheco.png",
+      "src": "/dm-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/mario-pacheco.png",
+      "src": "/dm-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
