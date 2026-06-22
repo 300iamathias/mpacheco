@@ -1,0 +1,35 @@
+{
+  "name": "Di Mali — Manos Mágicas",
+  "short_name": "Di Mali",
+  "description": "Sombreros de paja toquilla 100% artesanales. Patrimonio Cultural de la Humanidad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d3a2e",
+  "theme_color": "#2d3a2e",
+  "icons": [
+    {
+      "src": "/mario-pacheco.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/mario-pacheco.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/mario-pacheco.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/mario-pacheco.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
